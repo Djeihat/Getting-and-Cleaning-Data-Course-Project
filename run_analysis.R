@@ -30,6 +30,7 @@ names(datlist[[6]])<-datlist[[1]]$V2      # X_test and X_train sets
 ## in the X_test and X-train sets.
 mean_std<-grep("mean[^F]|std",datlist[[1]]$V2) ## Makes a vector of rows with "mean" and "std"
 ## the [^F] is to remove the columns with names that contain "meanFreq" and not just "mean"
+
 X_test<-datlist[[3]][,mean_std]
 X_train<-datlist[[6]][,mean_std]
 Test<-cbind(datlist[[2]],datlist[[4]],X_test)
@@ -42,6 +43,8 @@ Full_set$Activity<-recode(Full_set$Activity,        # Replacing the values of "A
                           "4"="Sitting",
                           "5"="Standing",
                           "6"="Laying")
+names(Full_set)<-gsub('-','',colnames(Full_set))      # Getting rid of the dashes in the variable names
+names(Full_set)<-gsub('[()]','',colnames(Full_set))   # Getting rid of the empty parentheses in the variable names
 ## Now that we have the data we want to work with, we'll find the averages of each measurement for
 ## each activity for each subject and save it to a .txt file.
 Finalset<-data.frame()
