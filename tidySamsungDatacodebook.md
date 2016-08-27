@@ -42,4 +42,4 @@ The set of variables that were extracted from these signals are:
 - mean(): Mean value
 - std(): Standard deviation
 
-Accelerometer readings (variable names that contain Acc) are in standard gravity units, 'g'. Gyroscope readings are in radians/second.
+Accelerometer readings (variable names that contain Acc) are in standard gravity units, 'g'. Gyroscope readings are in radians/second. The resulting data set is the average of measurements for each activity for each subject.
