@@ -1,10 +1,9 @@
 ## This script is designed to download, extract and clean data located at
 ## https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-## First, we'll load our appropriate wrangling packages,
+## First, we'll load the dplyr package,
 ## then download the data and read it into r.
 library(dplyr)
-library(tidyr)
 ## Let's look for the file first. If it doesn't exist, R will download it.
 if(!file.exists("getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip")){
       url<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
