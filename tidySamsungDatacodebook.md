@@ -42,4 +42,20 @@ The set of variables that were extracted from these signals are:
 - mean(): Mean value
 - std(): Standard deviation
 
-Accelerometer readings (variable names that contain Acc) are in standard gravity units, 'g'. Gyroscope readings are in radians/second. The resulting data set is the average of measurements for each activity for each subject.
+Accelerometer readings (variable names that contain Acc) are in standard gravity units, 'g'. Gyroscope readings are in radians/second. 
+
+The set of files downloaded and read into R were:
+
+* **features.txt**
+* **subject_test.txt**
+* **X_test.txt**
+* **y_test.txt**
+* **subject_train.txt**
+* **X_train.txt**
+* **y_train.txt**
+
+The contents of **features.txt** were used to name the variables contained in **X_test.txt** and **X_train.txt**, then variables that were the mean and standard deviation of each measurement were selected. The contents of **subject_test.txt** and **y_test.txt** were stitched to the contents of **X_test.txt** and the same was done for the **train** set. Then the data from the **test** set was stacked on top of the data from the **train** set. From there, the values of **y_test.txt** (the activities set) were changed from integer values to character strings that represented what each subject was doing while the data was being gathered. This was the final step of merging the **test** and **train** data sets.
+
+Next, a nested loop was created to subset out each subject's data, then find the column averages of the data from each activity, then stack all that back into a final data set.
+
+The resulting data set is the average of the mean and standard deviation for each measurement for each activity for each subject.
