@@ -1,5 +1,5 @@
 ---
-title: "tidySamsungDataCodebook.md"
+title: "Codebook.md"
 author: "Jay Yamakawa"
 date: "August 27, 2016"
 output: pdf_document
